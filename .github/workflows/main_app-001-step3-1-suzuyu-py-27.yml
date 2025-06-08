@@ -34,8 +34,8 @@ jobs:
       
       - name: Install dependencies
         run: |
-          ls -l backend            # まずはここを確認
-          ls -l LinkFastAPINext_Practical-main/backend  # もし入れ子ならここも
+        # ls -l backend            # まずはここを確認
+        # ls -l LinkFastAPINext_Practical-main/backend  # もし入れ子ならここも
           
        # run: pip install -r requirements.txt
         
