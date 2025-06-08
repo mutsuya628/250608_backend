@@ -18,10 +18,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - name: Dump filesystem
-        run: |
-          echo "当前ディレクトリ: $(pwd)"
-          ls -R .
+
       - name: Set up Python version
         uses: actions/setup-python@v5
         with:
