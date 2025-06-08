@@ -18,7 +18,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-
+      - name: Dump filesystem
+        run: |
+          echo "当前ディレクトリ: $(pwd)"
+          ls -R .
       - name: Set up Python version
         uses: actions/setup-python@v5
         with:
@@ -30,7 +33,9 @@ jobs:
           source venv/bin/activate
       
       - name: Install dependencies
-      　working-directory: backend     # ← requirements.txt があるフォルダ
+        run: |
+          ls -l backend            # まずはここを確認
+          ls -l LinkFastAPINext_Practical-main/backend  # もし入れ子ならここも
         run: pip install -r requirements.txt
         
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
