@@ -36,6 +36,7 @@ jobs:
         run: |
           ls -l backend            # まずはここを確認
           ls -l LinkFastAPINext_Practical-main/backend  # もし入れ子ならここも
+          
         run: pip install -r requirements.txt
         
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
